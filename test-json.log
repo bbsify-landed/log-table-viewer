@@ -1,0 +1,15 @@
+{"timestamp": "2024-01-15T10:30:45.123Z", "level": "info", "message": "Application started successfully", "service": "web-server", "port": 8080}
+{"timestamp": "2024-01-15T10:30:46.456Z", "level": "debug", "message": "Loading configuration", "config_file": "config.json"}
+{"timestamp": "2024-01-15T10:30:47.789Z", "level": "info", "message": "Database connection established", "host": "localhost", "port": 5432}
+{"timestamp": "2024-01-15T10:30:48.012Z", "level": "warn", "message": "Deprecated API endpoint used", "endpoint": "/api/v1/users", "client_ip": "192.168.1.100"}
+{"timestamp": "2024-01-15T10:30:49.345Z", "level": "error", "message": "Failed to connect to external service", "error": "Connection timeout", "retry_count": 1}
+{"timestamp": "2024-01-15T10:30:50.678Z", "level": "info", "message": "Retrying connection to external service", "attempt": 2}
+{"timestamp": "2024-01-15T10:30:51.901Z", "level": "info", "message": "Successfully connected to external service", "latency_ms": 120}
+{"timestamp": "2024-01-15T10:30:52.234Z", "level": "debug", "message": "Processing user request", "method": "GET", "path": "/api/v2/users/123", "user_id": 123}
+{"timestamp": "2024-01-15T10:30:53.567Z", "level": "info", "message": "User authenticated successfully", "user_id": 123, "session_id": "abc123"}
+{"timestamp": "2024-01-15T10:30:54.890Z", "level": "warn", "message": "Rate limit approaching", "user_id": 123, "requests_remaining": 5}
+{"timestamp": "2024-01-15T10:30:55.123Z", "level": "error", "message": "Database query failed", "error": "Table 'users' doesn't exist", "query": "SELECT * FROM users WHERE id = 123"}
+{"timestamp": "2024-01-15T10:30:56.456Z", "level": "info", "message": "Fallback to read-only mode activated", "duration_ms": 1000}
+{"timestamp": "2024-01-15T10:30:57.789Z", "level": "debug", "message": "Cache hit for user profile", "user_id": 123, "cache_key": "user_profile_123"}
+{"timestamp": "2024-01-15T10:30:58.012Z", "level": "info", "message": "Response sent successfully", "status_code": 200, "response_time_ms": 5.2}
+{"timestamp": "2024-01-15T10:30:59.345Z", "level": "info", "message": "Request completed", "duration_ms": 5.2, "status": "success"}

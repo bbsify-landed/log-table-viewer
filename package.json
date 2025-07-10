@@ -1,0 +1,52 @@
+{
+  "name": "log-table-viewer",
+  "displayName": "Log Table Viewer",
+  "description": "View and filter log files in a table format",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:logTableViewer.openLogViewer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "logTableViewer.openLogViewer",
+        "title": "Open Log Table Viewer",
+        "category": "Log Viewer"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "logTableViewer.openLogViewer",
+          "when": "resourceExtname == .log || resourceExtname == .json",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "logTableViewer.openLogViewer",
+          "when": "resourceExtname == .log || resourceExtname == .json",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^3.6.0",
+    "typescript": "^4.9.4"
+  }
+}
