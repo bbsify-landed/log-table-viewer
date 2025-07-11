@@ -2,4 +2,10 @@
 out/
 node_modules/
 *.vsix
+*.log
+package-lock.json
+.vscode/
+.vscode-test/
+tsconfig.tsbuildinfo
+webview-ui/out/
 

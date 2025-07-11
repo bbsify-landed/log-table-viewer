@@ -4,13 +4,10 @@
   "description": "View and filter log files in a table format",
   "version": "0.1.0",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:logTableViewer.openLogViewer"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -39,14 +36,49 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile",
+    "vscode:prepublish": "npm run build",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "dev": "vite",
+    "build": "npm run build:webview && npm run build:extension",
+    "build:webview": "vite build",
+    "build:extension": "tsc src/extension.ts src/logTableViewerProvider.ts --outDir out --module commonjs --target ES2020",
+    "preview": "vite preview",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "install-local": "code --install-extension log-table-viewer-0.1.0.vsix"
   },
   "devDependencies": {
     "@types/node": "16.x",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
     "@types/vscode": "^1.74.0",
     "@vscode/vsce": "^3.6.0",
-    "typescript": "^4.9.4"
-  }
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.3.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "keywords": [
+    "log",
+    "viewer",
+    "table",
+    "filter",
+    "json",
+    "slog",
+    "logs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/log-table-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/username/log-table-viewer/issues"
+  },
+  "homepage": "https://github.com/username/log-table-viewer#readme"
 }

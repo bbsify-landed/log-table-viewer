@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: var(--vscode-editor-background);
+  color: var(--vscode-editor-foreground);
+}
+
+.header {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-name {
+  font-weight: bold;
+  color: var(--vscode-textLink-foreground);
+}
+
+.filter-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--vscode-editor-background);
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.filter-input {
+  width: 100%;
+  padding: 5px;
+  background-color: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 3px;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.log-table th, .log-table td {
+  border: 1px solid var(--vscode-panel-border);
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.log-table th {
+  background-color: var(--vscode-editor-selectionBackground);
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+}
+
+.log-table th:hover {
+  background-color: var(--vscode-editor-selectionHighlightBackground);
+}
+
+.log-table tr:nth-child(even) {
+  background-color: var(--vscode-list-evenBackground);
+}
+
+.log-table tr:hover {
+  background-color: var(--vscode-list-hoverBackground);
+}
+
+.level-ERROR { color: var(--vscode-errorForeground); }
+.level-WARN, .level-WARNING { color: var(--vscode-warningForeground); }
+.level-INFO { color: var(--vscode-textLink-foreground); }
+.level-DEBUG { color: var(--vscode-descriptionForeground); }
+.line-number { color: var(--vscode-editorLineNumber-foreground); }
+.message-col { max-width: 400px; word-wrap: break-word; }
+.stats {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--vscode-descriptionForeground);
+}
+
+.expandable-row {
+  cursor: pointer;
+}
+
+.expanded-content {
+  background-color: var(--vscode-editor-background);
+  padding: 10px;
+  border: 1px solid var(--vscode-panel-border);
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.expand-icon {
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+.no-logs {
+  text-align: center;
+  color: var(--vscode-descriptionForeground);
+}
