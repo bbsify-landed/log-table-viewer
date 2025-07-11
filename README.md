@@ -2,6 +2,8 @@
 
 A VS Code extension that provides a clean, table-based view for log files with filtering and sorting capabilities.
 
+![Log Table Viewer Screenshot](assets/screenshot-large.png)
+
 ## Features
 
 - **Multiple Format Support**: JSON, slog, and common log formats
