@@ -1,0 +1,19 @@
+2024-01-15 10:30:15 INFO Starting application server
+2024-01-15 10:30:16 INFO Loading configuration from /etc/app/config.json
+2024-01-15 10:30:17 DEBUG Database connection pool initialized with 10 connections
+2024-01-15 10:30:18 INFO Server listening on port 8080
+2024-01-15 10:30:25 INFO User authentication successful for user: john_doe
+2024-01-15 10:30:26 DEBUG Processing request: GET /api/users/123
+2024-01-15 10:30:27 INFO Database query executed in 45ms
+2024-01-15 10:30:28 WARN Rate limit approaching for IP: 192.168.1.100
+2024-01-15 10:30:30 ERROR Failed to connect to external service: timeout after 5000ms
+2024-01-15 10:30:31 INFO Retrying connection to external service
+2024-01-15 10:30:35 INFO Connection to external service restored
+2024-01-15 10:30:40 DEBUG Cache hit for key: user_profile_123
+2024-01-15 10:30:45 INFO Request completed successfully: 200 OK
+2024-01-15 10:30:50 WARN High memory usage detected: 85%
+2024-01-15 10:30:55 ERROR Database connection lost, attempting reconnection
+2024-01-15 10:31:00 INFO Database connection restored
+2024-01-15 10:31:05 DEBUG Garbage collection completed in 120ms
+2024-01-15 10:31:10 INFO User logout: john_doe
+2024-01-15 10:31:15 INFO Application server shutting down gracefully

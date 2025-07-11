@@ -1,0 +1,19 @@
+time=2024-01-15T10:30:15.123Z level=INFO msg="Starting application server" service=web-server version=1.2.3
+time=2024-01-15T10:30:16.456Z level=INFO msg="Loading configuration" config_path=/etc/app/config.json
+time=2024-01-15T10:30:17.789Z level=DEBUG msg="Database connection pool initialized" pool_size=10 driver=postgresql
+time=2024-01-15T10:30:18.012Z level=INFO msg="Server listening" port=8080 host=0.0.0.0
+time=2024-01-15T10:30:25.345Z level=INFO msg="User authentication successful" user_id=john_doe session_id=abc123
+time=2024-01-15T10:30:26.678Z level=DEBUG msg="Processing request" method=GET path=/api/users/123 request_id=req-456
+time=2024-01-15T10:30:27.901Z level=INFO msg="Database query executed" query_time_ms=45 table=users
+time=2024-01-15T10:30:28.234Z level=WARN msg="Rate limit approaching" client_ip=192.168.1.100 current_rate=95 limit=100
+time=2024-01-15T10:30:30.567Z level=ERROR msg="Failed to connect to external service" service=payment-api timeout_ms=5000 error="connection timeout"
+time=2024-01-15T10:30:31.890Z level=INFO msg="Retrying connection" service=payment-api attempt=2 backoff_ms=1000
+time=2024-01-15T10:30:35.123Z level=INFO msg="Connection restored" service=payment-api response_time_ms=200
+time=2024-01-15T10:30:40.456Z level=DEBUG msg="Cache hit" key=user_profile_123 ttl_remaining=3600
+time=2024-01-15T10:30:45.789Z level=INFO msg="Request completed" status=200 response_time_ms=320 request_id=req-456
+time=2024-01-15T10:30:50.012Z level=WARN msg="High memory usage" memory_usage_percent=85 heap_size_mb=1024
+time=2024-01-15T10:30:55.345Z level=ERROR msg="Database connection lost" error="connection reset by peer" pool_active=0
+time=2024-01-15T10:31:00.678Z level=INFO msg="Database connection restored" pool_active=10 reconnect_time_ms=500
+time=2024-01-15T10:31:05.901Z level=DEBUG msg="Garbage collection completed" gc_time_ms=120 heap_freed_mb=256
+time=2024-01-15T10:31:10.234Z level=INFO msg="User logout" user_id=john_doe session_duration_min=15
+time=2024-01-15T10:31:15.567Z level=INFO msg="Application server shutting down" reason=graceful_shutdown active_connections=0
