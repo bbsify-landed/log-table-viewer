@@ -2,7 +2,7 @@
   "name": "log-table-viewer",
   "displayName": "Log Table Viewer",
   "description": "View and filter log files in a table format",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -10,6 +10,7 @@
     "Other"
   ],
   "main": "./out/extension.js",
+  "packageManager": "pnpm@8.0.0",
   "contributes": {
     "commands": [
       {
@@ -36,17 +37,17 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run build",
+    "vscode:prepublish": "pnpm run build",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "dev": "vite",
-    "build": "npm run build:webview && npm run build:extension",
+    "build": "pnpm run build:webview && pnpm run build:extension",
     "build:webview": "vite build",
     "build:extension": "tsc src/extension.ts src/logTableViewerProvider.ts --outDir out --module commonjs --target ES2020",
     "preview": "vite preview",
     "package": "vsce package",
     "publish": "vsce publish",
-    "install-local": "code --install-extension log-table-viewer-0.1.0.vsix"
+    "install-local": "code --install-extension log-table-viewer-1.0.0.vsix"
   },
   "devDependencies": {
     "@types/node": "16.x",
@@ -71,14 +72,19 @@
     "slog",
     "logs"
   ],
-  "author": "",
+  "author": "bbsify <leon@bbsify.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/log-table-viewer"
+    "url": "https://github.com/bbsify-landed/log-table-viewer"
   },
   "bugs": {
-    "url": "https://github.com/username/log-table-viewer/issues"
+    "url": "https://github.com/bbsify-landed/log-table-viewer/issues"
   },
-  "homepage": "https://github.com/username/log-table-viewer#readme"
+  "homepage": "https://github.com/bbsify-landed/log-table-viewer#readme",
+  "files": [
+    "out/",
+    "LICENSE",
+    "README.md"
+  ]
 }
